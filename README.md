@@ -1,4 +1,4 @@
-# tool-clusteval
+# clusteval
 
 Evaluates clustering results with ClustEval and exports quality scores and visual reports.
 

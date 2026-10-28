@@ -74,8 +74,8 @@ config:
     shape: null
     type: IMAGE
 info:
-  name: tool-clusteval
-  slug: tool-clusteval
+  name: clusteval
+  slug: clusteval
   type: EVALUATION
   sourceUrl: https://github.com/FedLearnNet/tool-clusteval
   shortDescription: Evaluates clustering results with ClustEval and exports quality
