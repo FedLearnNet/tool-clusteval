@@ -1,0 +1,83 @@
+config:
+  hyperparams:
+  - default: agglomerative
+    description: Clustering algorithm to use.
+    maxValue: null
+    minValue: null
+    name: clustering_algorithm
+    options:
+    - agglomerative
+    - kmeans
+    - dbscan
+    - hdbscan
+    pattern: null
+    type: CATEGORICAL
+  - default: silhouette
+    description: Evaluation method for clustering.
+    maxValue: null
+    minValue: null
+    name: evaluation_method
+    options:
+    - silhouette
+    - dbindex
+    - derivative
+    pattern: null
+    type: CATEGORICAL
+  - default: ward
+    description: Linkage method for hierarchical clustering.
+    maxValue: null
+    minValue: null
+    name: linkage
+    options:
+    - single
+    - ward
+    - complete
+    pattern: null
+    type: CATEGORICAL
+  - default: '25'
+    description: Maximum number of clusters (-1 for no restriction).
+    maxValue: null
+    minValue: -1.0
+    name: max_clusters
+    options: []
+    pattern: null
+    type: INTEGER
+  input:
+  - description: Data in CSV format
+    maxValue: null
+    minValue: null
+    name: data
+    required: true
+    shape: null
+    type: CSV
+    hasHeader: true
+    tabularSchema:
+      allowOnlyNumbers: true
+      prohibitedNulls: true
+  output:
+  - description: Clustering evaluation scores plot.
+    maxValue: null
+    minValue: null
+    name: cluster_scores
+    shape: null
+    type: IMAGE
+  - description: Silhouette analysis plot.
+    maxValue: null
+    minValue: null
+    name: silhouette_plot
+    shape: null
+    type: IMAGE
+  - description: Scatter plot of clustered data.
+    maxValue: null
+    minValue: null
+    name: scatter_plot
+    shape: null
+    type: IMAGE
+info:
+  name: tool-clusteval
+  slug: tool-clusteval
+  type: EVALUATION
+  sourceUrl: https://github.com/FedLearnNet/tool-clusteval
+  shortDescription: Evaluates clustering results with ClustEval and exports quality
+    scores and visual reports.
+  longDescription: null
